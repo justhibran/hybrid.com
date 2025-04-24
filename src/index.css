@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+@import "tailwindcss";
+:root {
+  --primary-color: #10b981;
+  --primary-dark: #059669;
+  --secondary-color: #0f172a;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  scroll-behavior: smooth;
+}
+
+.section-container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.hero-pattern {
+  background-image: url('https://api.placeholder.com/1440/600');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero-pattern::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, rgba(15,23,42,0.85) 0%, rgba(15,23,42,0.6) 100%);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.stat-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-card {
+  border-left: 4px solid var(--primary-color);
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button {
+  background: var(--primary-color);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+.client-logo {
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.client-logo:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+  --color-primary: #818cf8;
+  --color-primary-dark: #6366f1;
+  --color-secondary: #fbbf24;
+  --color-accent: #34d399;
+  --color-background: #18181b;
+  --color-surface: #232336;
+  --color-border: #27272a;
+  --color-text: #f3f4f6;
+  --color-text-light: #a1a1aa;
+  --color-error: #f87171;
+  --color-warning: #fbbf24;
+  --color-success: #4ade80;
+  --color-info: #60a5fa;
+}
+
+body,
+html {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
